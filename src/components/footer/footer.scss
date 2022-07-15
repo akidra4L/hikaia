@@ -1,0 +1,36 @@
+.footer {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 0.5px;
+
+    &-empty {
+        width: 30vw;
+        height: 10vh;
+    }
+
+    &-text {
+        width: 30vw;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-links {
+        width: 30vw;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        i {
+            padding: 0 5px;
+            font-size: 30px;
+        }
+    }
+}

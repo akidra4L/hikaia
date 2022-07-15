@@ -1,0 +1,28 @@
+.main {
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-wrapper {
+        width: 500px;
+        height: 400px;
+        background-color: rgba(211, 211, 211, 0.6);
+        border-radius: 10px;
+
+        &-title {
+            padding: 15px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        &-text {
+            padding: 0 15px 15px 15px;
+        }
+    }
+}
