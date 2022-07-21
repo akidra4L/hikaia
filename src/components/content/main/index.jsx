@@ -1,16 +1,15 @@
+import React from "react";
+import kazakhstanData from "../../../data/kazakhstan.json";
+import worldData from "../../../data/world.json";
+
 export const Main = () => {
   return (
     <div className="main">
-      <div className="main-wrapper">
-        <div className="main-wrapper-title">
-          <p>hikaia</p>
+      {kazakhstanData.map((item) => (
+        <div className="main-wrapper">
+          {item.events}
         </div>
-        <div className="main-wrapper-text">
-          <p>
-            Описание проекта.
-          </p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

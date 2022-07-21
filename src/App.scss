@@ -2,3 +2,35 @@
 @import "./components/footer/footer.scss";
 @import "./components/content/main/main.scss";
 @import "./components/footer/footer.scss";
+
+.line {
+    width: 100%;
+    position: fixed;
+    opacity: 1;
+    font-size: 20px;
+    font-weight: 500;
+    top: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    border-bottom: 1px dashed #121212;
+}
+
+.not-line {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.55s opacity, 0.55s visibility;
+}
+.line:hover~.not-line{
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width: 462px) {
+    .line {
+        top: 90%;
+        padding-left: 28%;
+        font-size: 30px;
+    }
+}
