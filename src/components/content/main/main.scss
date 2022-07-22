@@ -2,10 +2,29 @@
     width: 100vw;
     height: 100%;
     padding: 10px;
+
+    &-countries {
+        padding-left: 250px;
+        padding-right: 280px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        p {
+            font-size: 40px;
+            font-weight: 500;
+        }
+    }
 }
 
 .column {
     width: 50vw;
+    height: 300px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
+}
+
+.separator {
+    background-color: red;
 }

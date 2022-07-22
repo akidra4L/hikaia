@@ -1,22 +1,48 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import { Navbar } from "./components/navbar";
+import { MainBlock } from "./components/content/main-block";
 import { Main } from "./components/content/main";
 import { Footer } from "./components/footer";
 
 const App = () => {
-  const [year, setYear] = useState(1445);
-  const [line, setLine] = useState(true);
+  const [year, setYear] = useState(1430);
+  const [isLine, setIsLine] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const height = parseInt(window.scrollY);
+      if (year + parseInt(height / 7) <= 2022) {
+        setYear(year + parseInt(height / 7));
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (year >= 1450) {
+      setIsLine(true);
+    }
+    if (year < 1450) {
+      setIsLine(false);
+    }
+  }, [year]);
 
   return (
     <BrowserRouter>
       <Navbar />
-      {/* <div className={line ? "line" : "not-line"}>{year} year</div>  */}
+      <MainBlock />
+      <div className={isLine ? "line" : "not-line"}>{year} year</div>
       <Main />
       <Footer />
     </BrowserRouter>
-  )
-}
+  );
+};
 
 export default App;
