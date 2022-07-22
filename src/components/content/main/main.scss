@@ -1,7 +1,6 @@
 .main {
     width: 100vw;
     height: 100%;
-    padding: 10px;
 
     &-countries {
         padding-left: 250px;
@@ -15,16 +14,22 @@
             font-weight: 500;
         }
     }
+
+    &-content {
+        &-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 .column {
+    // border: 1px solid black;
     width: 50vw;
     height: 300px;
     padding: 40px;
     display: flex;
     flex-direction: column;
-}
-
-.separator {
-    background-color: red;
+    align-items: center;
 }

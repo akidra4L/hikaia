@@ -2,8 +2,6 @@
 @import "./components/content/main-block/mainblock.scss";
 @import "./components/content/main/main.scss";
 @import "./components/footer/footer.scss";
-@import "./components/content/kazakhstan/kazakhstan.scss";
-@import "./components/content/world/world.scss";
 
 .line {
     padding-bottom: 5px;
@@ -12,9 +10,8 @@
     opacity: 1;
     font-size: 20px;
     font-weight: 500;
-    top: 80%;
+    top: 85%;
     display: flex;
-    align-items: center;
     justify-content: center;
     color: #121212;
     border-bottom: 1px dashed #121212;

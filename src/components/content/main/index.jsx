@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   Timeline,
   TimelineItem,
@@ -26,64 +28,46 @@ const kzAndWorld = () => {
 export const Main = () => {
   const newKzAndWorld = kzAndWorld();
 
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   console.log(newKzAndWorld);
   return (
     <div className="main">
       <div className="main-countries">
-        <p>Kazakhstan</p>
-        <p>World</p>
+        <p>Казахстан</p>
+        <p>Мир</p>
       </div>
 
-      {newKzAndWorld.map((item, idx) => (
-        <div>
-          <Timeline position="alternate">
-            <TimelineItem>
-              <div className="column">
-                {item.kz.events.map((event) => (
-                  <TimelineOppositeContent>
-                    <p>{event}</p>
-                  </TimelineOppositeContent>
-                ))}
-              </div>
-              <TimelineSeparator>
-                <TimelineDot />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <div className="column">
-                {item.wrld.events.map((event) => (
-                  <TimelineContent>
-                    <p>{event}</p>
-                  </TimelineContent>
-                ))}
-              </div>
-            </TimelineItem>
-          </Timeline>
-        </div>
-      ))}
+      <div className="main-content">
+        {newKzAndWorld.map((item, idx) => (
+          <div className="main-content-items">
+            <Timeline>
+              <TimelineItem>
+                <div className="column">
+                  {item.kz.events.map((event) => (
+                    <TimelineOppositeContent data-aos="fade-up">
+                      <p>{event}</p>
+                    </TimelineOppositeContent>
+                  ))}
+                </div>
+                <TimelineSeparator>
+                  <TimelineDot color="primary" />
+                  <TimelineConnector className="connector" />
+                </TimelineSeparator>
+                <div className="column">
+                  {item.wrld.events.map((event) => (
+                    <TimelineContent data-aos="fade-up">
+                      <p>{event}</p>
+                    </TimelineContent>
+                  ))}
+                </div>
+              </TimelineItem>
+            </Timeline>
+          </div>
+        ))}
+      </div>
     </div>
-    // <div className="main">
-    //   <div className="main-countries">
-    //     <p>Kazakhstan</p>
-    //     <p>World</p>
-    //   </div>
-    //   <Timeline position="alternate">
-    //     <TimelineItem>
-    //       <TimelineOppositeContent>
-    //         <p>
-    //           <KzSide />
-    //         </p>
-    //       </TimelineOppositeContent>
-    //       <TimelineSeparator>
-    //         <TimelineDot />
-    //         <TimelineConnector />
-    //       </TimelineSeparator>
-    //       <TimelineContent>
-    //         <p>
-    //           <WorldSide />
-    //         </p>
-    //       </TimelineContent>
-    //     </TimelineItem>
-    //   </Timeline>
-    // </div>
   );
 };

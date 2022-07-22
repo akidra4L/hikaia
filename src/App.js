@@ -7,7 +7,7 @@ import { Main } from "./components/content/main";
 import { Footer } from "./components/footer";
 
 const App = () => {
-  const [year, setYear] = useState(1430);
+  const [year, setYear] = useState(1440);
   const [isLine, setIsLine] = useState(true);
 
   useEffect(() => {
@@ -38,8 +38,10 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <MainBlock />
-      <div className={isLine ? "line" : "not-line"}>{year} year</div>
       <Main />
+      <div className={isLine ? "line" : "not-line"}>
+        <p>{year} год</p>
+      </div>
       <Footer />
     </BrowserRouter>
   );
