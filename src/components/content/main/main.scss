@@ -33,3 +33,33 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media screen and (max-width: 462px) {
+    .main {
+        width: 100vw;
+        height: 100%;
+        &-countries {
+            padding-left: 30px;
+            padding-right: 40px;
+
+            p {
+                font-size: 25px;
+            }
+        }
+
+        &-content {
+            &-items {
+                padding: 15px;
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .column {
+        width: 100%;
+        height: 500px;
+        padding: 40px 0px;
+    }
+}

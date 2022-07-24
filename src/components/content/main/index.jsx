@@ -43,7 +43,11 @@ export const Main = () => {
       <div className="main-content">
         {newKzAndWorld.map((item, idx) => (
           <div className="main-content-items">
-            <Timeline>
+            <Timeline
+              sx={{
+                padding: 0,
+              }}
+            >
               <TimelineItem>
                 <div className="column">
                   {item.kz.events.map((event) => (
