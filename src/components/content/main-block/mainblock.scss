@@ -4,4 +4,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &-wrapper {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0.9);
+            animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+        }
+    }
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
 }
