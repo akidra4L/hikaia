@@ -13,7 +13,7 @@
         justify-content: center;
         align-items: center;
 
-        h1 {
+        h2 {
             font-size: 65px;
             font-weight: 400;
             color: black;
@@ -32,6 +32,13 @@
             font-weight: 400;
             color: black;
         }
+        h2:hover {
+            color: lightcoral;
+        }
+        
+        &-chosen {
+            border-bottom: solid 1px black;
+        }
     }
 
     &-references {
@@ -45,6 +52,13 @@
             font-size: 32px;
             font-weight: 400;
             color: black;
+        }
+        h2:hover {
+            color: lightcoral;
+        }
+
+        &-chosen {
+            border-bottom: solid 1px black;
         }
     }
 }

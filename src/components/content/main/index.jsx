@@ -45,8 +45,8 @@ export const Main = () => {
         <p>Мир</p>
       </div>
       <div className="main-content">
-        {newKzAndWorld.map((item) => (
-          <div className="main-content-items">
+        {newKzAndWorld.map((item, index) => (
+          <div className="main-content-items" key={index}>
             <Timeline
               sx={{
                 padding: 0,
@@ -56,8 +56,8 @@ export const Main = () => {
                 <div className="column">
                   <TimelineOppositeContent data-aos="fade-up">
                     <div className="column-events">
-                      {item.kz.events.map((event) => (
-                        <p>{event}</p>
+                      {item.kz.events.map((event, idx) => (
+                        <p key={idx}>{event}</p>
                       ))}
                     </div>
                   </TimelineOppositeContent>
@@ -69,8 +69,8 @@ export const Main = () => {
                 <div className="column">
                   <TimelineContent data-aos="fade-up">
                     <div className="column-events">
-                      {item.wrld.events.map((event) => (
-                        <p>{event}</p>
+                      {item.wrld.events.map((event, idx) => (
+                        <p key={idx}>{event}</p>
                       ))}
                     </div>
                   </TimelineContent>
