@@ -9,17 +9,22 @@ export const Footer = () => {
         <p>nFactorial Summer 2022</p>
       </div>
       <div className="footer-links">
-        <a href="https://www.instagram.com/gubayevv/" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
+        <a
+          href="https://www.instagram.com/gubayevv/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-instagram"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/alikhan-gubayev-773855233/"
           target="_blank"
+          rel="noreferrer"
         >
-          <i class="fa-brands fa-linkedin"></i>
+          <i className="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://github.com/akidra4L" target="_blank">
-          <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/akidra4L" target="_blank" rel="noreferrer">
+          <i className="fa-brands fa-github"></i>
         </a>
       </div>
     </div>

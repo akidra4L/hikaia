@@ -18,6 +18,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        p {
+            padding: 4px;
+        }
     }
 
     &-links {
@@ -30,7 +34,11 @@
         i {
             padding: 0 5px;
             font-size: 30px;
-            color: gray;
+            color:  black;
         }
     }
+}
+
+.fa-brands:hover {
+    color: lightcoral;
 }

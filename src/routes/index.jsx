@@ -1,11 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 
-import { Navbar } from "../components/navbar";
 import { Main } from "../components/content/main";
+import { Source } from "../components/content/source";
+import { Faq } from "../components/content/faq";
 
 export const RouteList = () => {
-  <Routes>
-    <Route path="/" element={<Navbar />} />
-    <Route path="/" element={<Main />} />
-  </Routes>;
+  return (
+    <Routes>
+      <Route path="/source" element={<Source />} />
+
+      <Route path="/" element={<Main />} />
+
+      <Route path="/faq" element={<Faq />} />
+    </Routes>
+  )
 };

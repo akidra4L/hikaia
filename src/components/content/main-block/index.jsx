@@ -13,6 +13,7 @@ export const MainBlock = () => {
             ],
             autoStart: true,
             loop: true,
+            delay: 75,
           }}
         />
       </div>
