@@ -1,5 +1,5 @@
 export const Faq = () => {
     return (
-        <div className="faq">Hello, World!</div>
+        <div className="faq">This is FAQ.</div>
     )
 }
