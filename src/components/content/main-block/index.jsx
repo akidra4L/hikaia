@@ -2,6 +2,14 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 
 export const MainBlock = () => {
+  const handleArrow = () => {
+    console.log("clicked");
+    window.scrollTo({
+      top: 750,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="mainblock">
       <div className="mainblock-wrapper">
@@ -16,6 +24,11 @@ export const MainBlock = () => {
             delay: 75,
           }}
         />
+      </div>
+      <div className="mainblock-arrow">
+        <button onClick={handleArrow}>
+          <span>↓</span>
+        </button>
       </div>
     </div>
   );

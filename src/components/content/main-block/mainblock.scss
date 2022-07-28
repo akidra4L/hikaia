@@ -2,6 +2,7 @@
     width: 100vw;
     height: 85vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -11,6 +12,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 100px;
 
         h2 {
             font-weight: 500;
@@ -19,14 +21,30 @@
         
         p {
             font-size: 16px;
-            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            overflow: hidden;                   /* Ensures the content is not revealed until the animation */
             border-right: .15em solid orange; /* The typwriter cursor */
-            white-space: nowrap; /* Keeps the content on a single line */
-            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-            letter-spacing: .1px; /* Adjust as needed */
+            white-space: nowrap;                /* Keeps the content on a single line */
+            margin: 0 auto;                     /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .1px;               /* Adjust as needed */
             animation: 
                 typing 3.5s steps(40, end),
                 blink-caret .75s step-end infinite;
+        }
+    }
+
+    &-arrow {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 32px;
+            color: #121212;
         }
     }
 }
