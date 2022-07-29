@@ -5,7 +5,7 @@ export const MainBlock = () => {
   const handleArrow = () => {
     console.log("clicked");
     window.scrollTo({
-      top: 750,
+      top: 450,
       behavior: "smooth",
     });
   };
