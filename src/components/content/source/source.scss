@@ -13,13 +13,12 @@
             padding-left: 50px;
         }
     }
+}
 
-    &-person {
-        position: absolute;
-        top: 75%;
-
-        img {
-            height: 100px;
+@media screen and (max-width: 462px) {
+    .source {
+        &-wrapper {
+            padding: 50px;
         }
     }
 }

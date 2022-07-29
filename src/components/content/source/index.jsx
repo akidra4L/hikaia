@@ -24,9 +24,6 @@ export const Source = () => {
             </li>
           </ul>
         </div>
-        <div className="source-person">
-          <img src={warrior} />
-        </div>
       </div>
     </div>
   );

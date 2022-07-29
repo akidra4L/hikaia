@@ -5,3 +5,13 @@
 @import "./components/content/source/source.scss";
 @import "./components/content/line/line.scss";
 @import "./components/content/faq/faq.scss";
+
+.person {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+
+    img {
+        height: 100px;
+    }
+}
