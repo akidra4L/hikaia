@@ -66,3 +66,29 @@
 .link {
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 462px) {
+    .navbar {
+        height: 10vh;
+        width: 100%;
+
+        &-title {
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        &-faq {
+            h2 {
+                font-size: 16px;
+            }
+        }
+
+        &-references {
+            h2 {
+                font-size: 16px;
+            }
+        }
+    }
+}

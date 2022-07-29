@@ -1,4 +1,25 @@
 .source {
     width: 100vw;
     height: 74vh;
+
+    &-wrapper {
+        padding: 75px;
+
+        &-title {
+            padding-bottom: 25px;
+        }
+
+        &-items {
+            padding-left: 50px;
+        }
+    }
+
+    &-person {
+        position: absolute;
+        top: 75%;
+
+        img {
+            height: 100px;
+        }
+    }
 }
