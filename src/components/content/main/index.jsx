@@ -48,7 +48,7 @@ export const Main = () => {
         {newKzAndWorld.map((item, index) => (
           <div className="main-content-items" key={index}>
             <Timeline
-              sx={{
+              style={{
                 padding: 0,
               }}
             >
