@@ -42,3 +42,20 @@
 .fa-brands:hover {
     color: lightcoral;
 }
+
+@media screen and (max-width: 462px) {
+    .footer {
+        &-empty {
+            width: 20vw;
+        }
+
+        &-text {
+            padding: 0;
+            width: 40vw;
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}
