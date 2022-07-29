@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { Main } from "../components/content/main";
 import { Source } from "../components/content/source";
-import { Faq } from "../components/content/faq";
+import { FAQ } from "../components/content/faq";
 
 export const RouteList = () => {
   return (
@@ -11,7 +11,7 @@ export const RouteList = () => {
 
       <Route path="/" element={<Main />} />
 
-      <Route path="/faq" element={<Faq />} />
+      <Route path="/faq" element={<FAQ />} />
     </Routes>
   )
 };

@@ -1,4 +1,16 @@
 .faq {
     width: 100vw;
     height: 74vh;
+    padding: 75px;
+}
+
+@media screen and (max-width: 462px) {
+    .faq {
+        height: 80vh;
+        padding: 50px;
+    }
+
+    .faq .row-title-text {
+        font-size: 15px;
+    }
 }
