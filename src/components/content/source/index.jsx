@@ -22,6 +22,11 @@ export const Source = () => {
                 Qazaqstan Tarihy
               </a>
             </li>
+            <li>
+              <a href="https://adebiportal.kz/ru" target="_blank">
+                Adebiportal
+              </a>
+            </li>
           </ul>
         </div>
       </div>

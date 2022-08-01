@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import {
@@ -28,8 +28,27 @@ const kzAndWorld = () => {
 };
 
 export const Main = () => {
-  const newKzAndWorld = kzAndWorld();
-  console.log(newKzAndWorld);
+  const [newKzAndWorld, setNewKzAndWorld] = useState(kzAndWorld());
+
+  const handleCurrentPersonKZ = (indexes) => {
+    let objects = [...newKzAndWorld];
+    for (let i = 0; i < objects.length; i++) {
+      if (i === indexes[0]) {
+        objects[i].kz.current_person = indexes[1];
+      }
+    }
+    setNewKzAndWorld(objects);
+  };
+
+  const handleCurrentPersonWRLD = (indexes) => {
+    let objects = [...newKzAndWorld];
+    for (let i = 0; i < objects.length; i++) {
+      if (i === indexes[0]) {
+        objects[i].wrld.current_person = indexes[1];
+      }
+    }
+    setNewKzAndWorld(objects);
+  };
 
   useEffect(() => {
     Aos.init({ duration: 1500 });
@@ -67,13 +86,17 @@ export const Main = () => {
                       <div className="column-item-person">
                         <h2>Личности:</h2>
                         {item.kz.famous.map((person, idx) => (
-                          <div>
-                            <button key={idx}>▹ {person}</button>
+                          <div key={idx} className="btn">
+                            <button
+                              onClick={() => handleCurrentPersonKZ([index, idx])}
+                            >
+                              - {person}
+                            </button>
                           </div>
                         ))}
                       </div>
                       <div className="column-item-img">
-                        <img src={item.kz.imgs.at(2)} />
+                        <img src={item.kz.imgs.at(item.kz.current_person)} />
                       </div>
                     </div>
                   </TimelineOppositeContent>
@@ -88,6 +111,25 @@ export const Main = () => {
                       {item.wrld.events.map((event, idx) => (
                         <p key={idx}>{event}</p>
                       ))}
+                    </div>
+                    <div className="column-item">
+                      <div className="column-item-img">
+                        <img
+                          src={item.wrld.imgs.at(item.wrld.current_person)}
+                        />
+                      </div>
+                      <div className="column-item-person">
+                        <h2>Личности:</h2>
+                        {item.wrld.famous.map((person, idx) => (
+                          <div key={idx} className="btn">
+                            <button
+                              onClick={() => handleCurrentPersonWRLD([index, idx])}
+                            >
+                              - {person}
+                            </button>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </TimelineContent>
                 </div>
