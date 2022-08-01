@@ -54,11 +54,27 @@ export const Main = () => {
             >
               <TimelineItem>
                 <div className="column">
-                  <TimelineOppositeContent data-aos="fade-up">
+                  <TimelineOppositeContent
+                    data-aos="fade-up"
+                    className="timeline"
+                  >
                     <div className="column-events">
                       {item.kz.events.map((event, idx) => (
                         <p key={idx}>{event}</p>
                       ))}
+                    </div>
+                    <div className="column-item">
+                      <div className="column-item-person">
+                        <h2>Личности:</h2>
+                        {item.kz.famous.map((person, idx) => (
+                          <div>
+                            <button key={idx}>▹ {person}</button>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="column-item-img">
+                        <img src={item.kz.imgs.at(2)} />
+                      </div>
                     </div>
                   </TimelineOppositeContent>
                 </div>
@@ -67,7 +83,7 @@ export const Main = () => {
                   <TimelineConnector className="connector" />
                 </TimelineSeparator>
                 <div className="column">
-                  <TimelineContent data-aos="fade-up">
+                  <TimelineContent data-aos="fade-up" className="timeline">
                     <div className="column-events">
                       {item.wrld.events.map((event, idx) => (
                         <p key={idx}>{event}</p>

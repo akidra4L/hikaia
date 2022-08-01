@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 export const Line = () => {
-  const [year, setYear] = useState(1425);
+  const [year, setYear] = useState(1435);
   const [isLine, setIsLine] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const height = parseInt(window.scrollY);
-      if (year + parseInt(height / 6) <= 2022) {
-        setYear(year + parseInt(height / 6));
+      if (year + parseInt(height / 10) <= 2022) {
+        setYear(year + parseInt(height / 10));
       }
     };
 
