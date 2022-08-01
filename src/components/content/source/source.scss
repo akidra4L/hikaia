@@ -7,12 +7,16 @@
 
         &-title {
             padding-bottom: 25px;
+            p {
+                font-size: 25px;
+            }
         }
 
         &-items {
             padding-left: 50px;
 
             a {
+                font-size: 22px;
                 text-decoration: none;
                 color: blue;
             }
