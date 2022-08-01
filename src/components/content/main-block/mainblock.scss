@@ -35,7 +35,9 @@
     &-arrow {
         position: absolute;
         top: 90%;
-        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         button {
             border: none;
             background: none;
@@ -57,9 +59,6 @@
             p {
                 font-size: 12px;
             }
-        }
-        &-arrow {
-            left: 48%;
         }
     }
 }
