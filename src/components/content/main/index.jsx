@@ -83,20 +83,22 @@ export const Main = () => {
                       ))}
                     </div>
                     <div className="column-item">
+                      <div className="column-item-img">
+                        <img src={item.kz.imgs.at(item.kz.current_person)} />
+                      </div>
                       <div className="column-item-person">
                         <h2>Личности:</h2>
                         {item.kz.famous.map((person, idx) => (
                           <div key={idx} className="btn">
                             <button
-                              onClick={() => handleCurrentPersonKZ([index, idx])}
+                              onClick={() =>
+                                handleCurrentPersonKZ([index, idx])
+                              }
                             >
                               - {person}
                             </button>
                           </div>
                         ))}
-                      </div>
-                      <div className="column-item-img">
-                        <img src={item.kz.imgs.at(item.kz.current_person)} />
                       </div>
                     </div>
                   </TimelineOppositeContent>
@@ -113,22 +115,24 @@ export const Main = () => {
                       ))}
                     </div>
                     <div className="column-item">
-                      <div className="column-item-img">
-                        <img
-                          src={item.wrld.imgs.at(item.wrld.current_person)}
-                        />
-                      </div>
                       <div className="column-item-person">
                         <h2>Личности:</h2>
                         {item.wrld.famous.map((person, idx) => (
                           <div key={idx} className="btn">
                             <button
-                              onClick={() => handleCurrentPersonWRLD([index, idx])}
+                              onClick={() =>
+                                handleCurrentPersonWRLD([index, idx])
+                              }
                             >
                               - {person}
                             </button>
                           </div>
                         ))}
+                      </div>
+                      <div className="column-item-img">
+                        <img
+                          src={item.wrld.imgs.at(item.wrld.current_person)}
+                        />
                       </div>
                     </div>
                   </TimelineContent>
