@@ -13,7 +13,7 @@ const App = () => {
       <div className="person">
         <img src={warrior} />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 };
