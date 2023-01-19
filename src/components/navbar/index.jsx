@@ -1,31 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
-const items = [
-  {
-    key: 0,
-    name: "источники",
-    link: "/source",
-    class: "navbar-references",
-  },
-  {
-    key: 1,
-    name: "hikaia",
-    link: "/",
-    class: "navbar-title",
-  },
-  {
-    key: 2,
-    name: "faq",
-    link: "/faq",
-    class: "navbar-faq",
-  },
-];
+import { data } from "./data";
 
 export const Navbar = () => {
   return (
     <div className="navbar">
-      {items.map((item) => (
+      {data.map((item) => (
         <div key={item.key} className={item.class}>
           <NavLink
             to={item.link}
